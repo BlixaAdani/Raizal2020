@@ -1,0 +1,113 @@
+@media (min-width: 576px) {
+    #Header .navbar-brand img {
+        height: 70px;
+    }
+
+    .main-section .img-fluid {
+        margin-top: 10%;
+        max-width: 50%; // Larger logo on tablets
+        margin-bottom: 15vh;
+    }
+
+    .videos iframe {
+        max-width: 300px;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+// 768px - Medium Devices (e.g., Landscape Tablets)
+@media (min-width: 768px) {
+    #Header .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .main-section .img-fluid {
+        max-width: 40%; // Adjust logo size
+    }
+
+    .videos iframe {
+        max-width: 320px; // Slightly larger videos
+    }
+}
+
+// 992px - Large Devices (e.g., Laptops)
+@media (min-width: 992px) {
+    #Header .navbar-brand img {
+        height: 80px;
+    }
+
+    .main-section .container p {
+        font-size: 1.2rem; // Larger description text
+    }
+
+    .videos iframe {
+        max-width: 350px; // Larger video size
+    }
+}
+
+// 1200px - Extra Large Devices (e.g., Desktops)
+@media (min-width: 1200px) {
+    #Header .navbar {
+        padding: 1.5rem 3rem;
+    }
+
+    .main-section .img-fluid {
+        max-width: 30%; // Full-sized logo
+    }
+
+    .videos iframe {
+        max-width: 400px; // Larger videos
+    }
+
+    .footer p {
+        font-size: 1.2rem;
+    }
+}
+
+// 1600px - Ultra Wide Screens
+@media (min-width: 1600px) {
+    .main-section .container p {
+        font-size: 1.5rem; // Even larger description text
+    }
+
+    .videos iframe {
+        max-width: 500px; // Large video size
+    }
+}
+
+// 1920px - Full HD
+@media (min-width: 1920px) {
+    #Header .navbar-brand img {
+        height: 100px; // Bigger logo
+    }
+
+    .main-section .img-fluid {
+        max-width: 25%; // Smaller relative logo size for larger screens
+    }
+
+    .videos iframe {
+        max-width: 600px; // Even larger videos
+    }
+}
+
+// 2560px - Ultra HD
+@media (min-width: 2560px) {
+    #Header .navbar-brand img {
+        height: 120px;
+    }
+
+    .main-section .img-fluid {
+        max-width: 20%;
+    }
+
+    .videos iframe {
+        max-width: 800px; // Largest video size
+    }
+
+    .footer p {
+        font-size: 1.5rem;
+    }
+}

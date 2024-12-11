@@ -1,0 +1,39 @@
+.main-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $background-image;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .container {
+        padding-top: 0;
+
+        p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .img-fluid {
+        max-width: 30%;
+        height: auto;
+    }
+
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+
+        iframe {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+    }
+}
