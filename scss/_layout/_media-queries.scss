@@ -9,7 +9,7 @@
         max-height: 100vh;
     }
 
-    .videos iframe {
+    .videos {
         max-width: 300px;
     }
 
@@ -19,48 +19,49 @@
     }
 }
 
-// 768px - Medium Devices (e.g., Landscape Tablets)
 @media (min-width: 768px) {
     #Header .navbar {
         padding: 1rem 2rem;
     }
 
     .main-section .img-fluid {
-        max-width: 40%; // Adjust logo size
+        max-width: 40%;
     }
 
-    .videos iframe {
-        max-width: 320px; // Slightly larger videos
+    .videos {
+        max-width: 320px;
     }
 }
 
-// 992px - Large Devices (e.g., Laptops)
 @media (min-width: 992px) {
     #Header .navbar-brand img {
         height: 80px;
     }
 
     .main-section .container p {
-        font-size: 1.2rem; // Larger description text
+        font-size: 1.2rem;
     }
 
-    .videos iframe {
-        max-width: 350px; // Larger video size
+    .videos {
+        max-width: 350px;
     }
 }
 
-// 1200px - Extra Large Devices (e.g., Desktops)
 @media (min-width: 1200px) {
     #Header .navbar {
         padding: 1.5rem 3rem;
     }
 
-    .main-section .img-fluid {
-        max-width: 30%; // Full-sized logo
+    .main-section {
+        height: 120vh;
+
+        .img-fluid {
+            max-width: 30%;
+        }
     }
 
-    .videos iframe {
-        max-width: 400px; // Larger videos
+    .videos {
+        max-width: 400px;
     }
 
     .footer p {
@@ -68,33 +69,30 @@
     }
 }
 
-// 1600px - Ultra Wide Screens
 @media (min-width: 1600px) {
     .main-section .container p {
-        font-size: 1.5rem; // Even larger description text
+        font-size: 1.5rem;
     }
 
-    .videos iframe {
-        max-width: 500px; // Large video size
+    .videos {
+        max-width: 500px;
     }
 }
 
-// 1920px - Full HD
 @media (min-width: 1920px) {
     #Header .navbar-brand img {
-        height: 100px; // Bigger logo
+        height: 100px;
     }
 
     .main-section .img-fluid {
-        max-width: 25%; // Smaller relative logo size for larger screens
+        max-width: 25%;
     }
 
-    .videos iframe {
-        max-width: 600px; // Even larger videos
+    .videos {
+        max-width: 600px;
     }
 }
 
-// 2560px - Ultra HD
 @media (min-width: 2560px) {
     #Header .navbar-brand img {
         height: 120px;
@@ -104,8 +102,8 @@
         max-width: 20%;
     }
 
-    .videos iframe {
-        max-width: 800px; // Largest video size
+    .videos {
+        max-width: 800px;
     }
 
     .footer p {

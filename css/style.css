@@ -9,8 +9,46 @@
     #Header .navbar .nav-link:hover {
       color: #fffc65; }
 
+/* Base styles for the audio container */
+.audio-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; }
+
+/* Pop-up player, initially hidden */
+.audio-player-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease; }
+
+/* Show the audio player when the container is hovered */
+.audio-container:hover .audio-player-popup {
+  visibility: visible;
+  opacity: 9; }
+
+/* Style the audio player controls */
+audio {
+  width: 300px;
+  /* Adjust to fit design */
+  background-color: #222;
+  /* Optional for pop-up */
+  border-radius: 5px; }
+
 .main-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/Fondo.jpg");
+  background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), url("/assets/Fondo.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -22,21 +60,11 @@
     padding-top: 0; }
     .main-section .container p {
       font-size: 1.2rem;
-      color: #fff;
+      color: #ffffffd7;
       margin-bottom: 2rem; }
   .main-section .img-fluid {
     max-width: 30%;
     height: auto; }
-  .main-section .videos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center; }
-    .main-section .videos iframe {
-      width: 100%;
-      max-width: 320px;
-      aspect-ratio: 16 / 9;
-      border: none; }
 
 #contact-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/Fondo320.jpg");
@@ -99,7 +127,7 @@
     margin-top: 10%;
     max-width: 50%;
     max-height: 100vh; }
-  .videos iframe {
+  .videos {
     max-width: 300px; }
   .footer p {
     font-size: 1rem;
@@ -110,7 +138,7 @@
     padding: 1rem 2rem; }
   .main-section .img-fluid {
     max-width: 40%; }
-  .videos iframe {
+  .videos {
     max-width: 320px; } }
 
 @media (min-width: 992px) {
@@ -118,15 +146,17 @@
     height: 80px; }
   .main-section .container p {
     font-size: 1.2rem; }
-  .videos iframe {
+  .videos {
     max-width: 350px; } }
 
 @media (min-width: 1200px) {
   #Header .navbar {
     padding: 1.5rem 3rem; }
-  .main-section .img-fluid {
-    max-width: 30%; }
-  .videos iframe {
+  .main-section {
+    height: 120vh; }
+    .main-section .img-fluid {
+      max-width: 30%; }
+  .videos {
     max-width: 400px; }
   .footer p {
     font-size: 1.2rem; } }
@@ -134,7 +164,7 @@
 @media (min-width: 1600px) {
   .main-section .container p {
     font-size: 1.5rem; }
-  .videos iframe {
+  .videos {
     max-width: 500px; } }
 
 @media (min-width: 1920px) {
@@ -142,7 +172,7 @@
     height: 100px; }
   .main-section .img-fluid {
     max-width: 25%; }
-  .videos iframe {
+  .videos {
     max-width: 600px; } }
 
 @media (min-width: 2560px) {
@@ -150,7 +180,7 @@
     height: 120px; }
   .main-section .img-fluid {
     max-width: 20%; }
-  .videos iframe {
+  .videos {
     max-width: 800px; }
   .footer p {
     font-size: 1.5rem; } }

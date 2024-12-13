@@ -1,5 +1,45 @@
+/* Base styles for the audio container */
+.audio-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Pop-up player, initially hidden */
+.audio-player-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+/* Show the audio player when the container is hovered */
+.audio-container:hover .audio-player-popup {
+    visibility: visible;
+    opacity: 9;
+}
+
+/* Style the audio player controls */
+audio {
+    width: 300px; /* Adjust to fit design */
+    background-color: #222;  /* Optional for pop-up */
+    border-radius: 5px;
+}
+
 .main-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $background-image;
+    background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), $background-image;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -13,7 +53,7 @@
 
         p {
             font-size: 1.2rem;
-            color: #fff;
+            color: #ffffffd7;
             margin-bottom: 2rem;
         }
     }
@@ -21,20 +61,6 @@
     .img-fluid {
         max-width: 30%;
         height: auto;
-    }
-
-    .videos {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-
-        iframe {
-            width: 100%;
-            max-width: 320px;
-            aspect-ratio: 16 / 9;
-            border: none;
-        }
     }
 }
 
@@ -58,7 +84,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 400px; // Limit the width for smaller screens
+            max-width: 400px;
             width: 100%;
     
             label {
