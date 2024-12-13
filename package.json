@@ -1,13 +1,21 @@
 {
   "name": "raizal",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./scss/_style.scss ./css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Naim Francisco Adani Leiva",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlixaAdani/Raizal2020.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlixaAdani/Raizal2020/issues"
+  },
+  "homepage": "https://github.com/BlixaAdani/Raizal2020#readme",
+  "description": ""
 }

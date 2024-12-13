@@ -2,7 +2,8 @@
   background-color: black !important; }
   #Header .navbar {
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.8) !important; }
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fffc65; }
     #Header .navbar .navbar-brand img {
       height: 80px; }
     #Header .navbar .nav-link:hover {
@@ -37,12 +38,59 @@
       aspect-ratio: 16 / 9;
       border: none; }
 
+#contact-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/Fondo320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #contact-bg .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; }
+    #contact-bg .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%; }
+      #contact-bg .contact-form form label {
+        font-size: 1rem;
+        color: #333; }
+      #contact-bg .contact-form form input, #contact-bg .contact-form form textarea {
+        font-size: 1rem;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px; }
+        #contact-bg .contact-form form input:focus, #contact-bg .contact-form form textarea:focus {
+          outline: none;
+          border-color: #1f53e0;
+          box-shadow: 0 0 5px rgba(31, 83, 224, 0.5); }
+      #contact-bg .contact-form form button {
+        font-size: 1rem;
+        background-color: #1f53e0b0;
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; }
+        #contact-bg .contact-form form button:hover {
+          background-color: #4d17e0; }
+        #contact-bg .contact-form form button:focus {
+          outline: none;
+          box-shadow: 0 0 5px rgba(77, 23, 224, 0.377); }
+
 .footer {
   background-color: #fffc65;
-  padding: 1rem 0; }
-  .footer p {
-    color: #080808;
-    margin: 0; }
+  padding: .5rem 0;
+  padding-top: 0.5rem p;
+    padding-top-color: #080808;
+    padding-top-margin: 0; }
 
 @media (min-width: 576px) {
   #Header .navbar-brand img {
@@ -50,11 +98,12 @@
   .main-section .img-fluid {
     margin-top: 10%;
     max-width: 50%;
-    margin-bottom: 15vh; }
+    max-height: 100vh; }
   .videos iframe {
     max-width: 300px; }
   .footer p {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    height: 20px; } }
 
 @media (min-width: 768px) {
   #Header .navbar {
