@@ -13,9 +13,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -120%);
-    background-color: #000;
+    background-color: #00000091;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(138, 129, 129, 0.397);
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0px 8px 20px rgb(0, 0, 0);
@@ -29,11 +29,10 @@
   audio {
     width: 300px;
     background-color: #000;
-    border-radius: 8px;
+    border-radius: 5px;
   
     &::-webkit-media-controls-panel {
-      background-color: #000000;
-      border-radius: 8px;
+      background-color: #000000
     }
   
     &::-webkit-media-controls-play-button,

@@ -1,3 +1,22 @@
+@media screen and (max-width: 385px) {
+    .audio-player-popup {
+        opacity: 1;
+        pointer-events: auto;
+        width: 80px;
+    }
+
+    .audio-container:hover .audio-player-popup {
+        top: 10%;
+        transform: translate(-50%, -10%);
+        width: 80px;
+    }
+
+    audio {
+        width: 160px;
+        background-color: #000;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .audio-player-popup {
       opacity: 1;
