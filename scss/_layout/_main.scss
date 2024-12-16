@@ -1,4 +1,3 @@
-/* Base styles for the audio container */
 .audio-container {
     position: relative;
     width: 100%;
@@ -7,36 +6,80 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
-
-/* Pop-up player, initially hidden */
-.audio-player-popup {
+  }
+  
+  .audio-player-popup {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid #fff;
-    border-radius: 10px;
+    transform: translate(-50%, -120%);
+    background-color: #000;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease;
-}
-
-/* Show the audio player when the container is hovered */
-.audio-container:hover .audio-player-popup {
-    visibility: visible;
-    opacity: 9;
-}
-
-/* Style the audio player controls */
-audio {
-    width: 300px; /* Adjust to fit design */
-    background-color: #222;  /* Optional for pop-up */
-    border-radius: 5px;
-}
+    box-shadow: 0px 8px 20px rgb(0, 0, 0);
+    opacity: 1;transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .audio-container:hover .audio-player-popup {
+    opacity: 1;
+  }
+  
+  audio {
+    width: 300px;
+    background-color: #000;
+    border-radius: 8px;
+  
+    &::-webkit-media-controls-panel {
+      background-color: #000000;
+      border-radius: 8px;
+    }
+  
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-pause-button,
+    &::-webkit-media-controls-seek-back-button,
+    &::-webkit-media-controls-seek-forward-button {
+      color: rgba(255, 255, 255, 0.678);
+      background-color: rgba(255, 255, 255, 0.692);
+      border-radius: 50%;
+      &:hover {
+        color: #c5c5c598;
+        background-color: rgba(255, 255, 255, 0.842);
+      }
+    }
+  
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.74);
+  
+      &:hover {
+        color: #bdbdbd;
+      }
+    }
+  
+    &::-webkit-media-controls-timeline {
+      height: 4px;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.664);
+    }
+  
+    &::-webkit-media-controls-volume-slider {
+      background-color: rgb(199, 199, 199);
+      border-radius: 2px;
+    }
+  
+    &::media-controls-panel {
+      background-color: #ffffff;
+      color: #ffffffb2;
+    }
+  
+    &::media-controls-play-button,
+    &::media-controls-pause-button {
+      color: rgba(255, 255, 255, 0.719);
+    }
+  }
 
 .main-section {
     background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), $background-image;

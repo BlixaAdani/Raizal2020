@@ -1,3 +1,23 @@
+@media screen and (max-width: 480px) {
+    .audio-player-popup {
+      opacity: 1;
+      pointer-events: auto;
+      width: 240px;
+    }
+  
+    .audio-container:hover .audio-player-popup {
+      top: 10%;
+      transform: translate(-50%, -10%);
+      width: 240px;
+    }
+
+    audio {
+        width: 200px;
+        background-color: #000;
+        border-radius: 8px;
+  }
+}
+
 @media (min-width: 576px) {
     #Header .navbar-brand img {
         height: 70px;
@@ -32,6 +52,14 @@
         max-width: 320px;
     }
 }
+
+/* Media Queries for Responsive Behavior */
+@media screen and (max-width: 768px) {
+    .audio-player-popup {
+      top: 10%;
+      transform: translate(-50%, -120%);
+    }
+  }
 
 @media (min-width: 992px) {
     #Header .navbar-brand img {

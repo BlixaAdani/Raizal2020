@@ -9,7 +9,6 @@
     #Header .navbar .nav-link:hover {
       color: #fffc65; }
 
-/* Base styles for the audio container */
 .audio-container {
   position: relative;
   width: 100%;
@@ -17,35 +16,56 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 1000; }
+  align-items: center; }
 
-/* Pop-up player, initially hidden */
 .audio-player-popup {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid #fff;
-  border-radius: 10px;
+  transform: translate(-50%, -120%);
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease; }
+  box-shadow: 0px 8px 20px black;
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease; }
 
-/* Show the audio player when the container is hovered */
 .audio-container:hover .audio-player-popup {
-  visibility: visible;
-  opacity: 9; }
+  opacity: 1; }
 
-/* Style the audio player controls */
 audio {
   width: 300px;
-  /* Adjust to fit design */
-  background-color: #222;
-  /* Optional for pop-up */
-  border-radius: 5px; }
+  background-color: #000;
+  border-radius: 8px; }
+  audio::-webkit-media-controls-panel {
+    background-color: #000000;
+    border-radius: 8px; }
+  audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-pause-button, audio::-webkit-media-controls-seek-back-button, audio::-webkit-media-controls-seek-forward-button {
+    color: rgba(255, 255, 255, 0.678);
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 50%; }
+    audio::-webkit-media-controls-play-button:hover, audio::-webkit-media-controls-pause-button:hover, audio::-webkit-media-controls-seek-back-button:hover, audio::-webkit-media-controls-seek-forward-button:hover {
+      color: #c5c5c598;
+      background-color: rgba(255, 255, 255, 0.842); }
+  audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.74); }
+    audio::-webkit-media-controls-current-time-display:hover, audio::-webkit-media-controls-time-remaining-display:hover {
+      color: #bdbdbd; }
+  audio::-webkit-media-controls-timeline {
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.664); }
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #c7c7c7;
+    border-radius: 2px; }
+  audio::media-controls-panel {
+    background-color: #ffffff;
+    color: #ffffffb2; }
+  audio::media-controls-play-button, audio::media-controls-pause-button {
+    color: rgba(255, 255, 255, 0.719); }
 
 .main-section {
   background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), url("/assets/Fondo.jpg");
@@ -120,6 +140,20 @@ audio {
     padding-top-color: #080808;
     padding-top-margin: 0; }
 
+@media screen and (max-width: 480px) {
+  .audio-player-popup {
+    opacity: 1;
+    pointer-events: auto;
+    width: 240px; }
+  .audio-container:hover .audio-player-popup {
+    top: 10%;
+    transform: translate(-50%, -10%);
+    width: 240px; }
+  audio {
+    width: 200px;
+    background-color: #000;
+    border-radius: 8px; } }
+
 @media (min-width: 576px) {
   #Header .navbar-brand img {
     height: 70px; }
@@ -140,6 +174,12 @@ audio {
     max-width: 40%; }
   .videos {
     max-width: 320px; } }
+
+/* Media Queries for Responsive Behavior */
+@media screen and (max-width: 768px) {
+  .audio-player-popup {
+    top: 10%;
+    transform: translate(-50%, -120%); } }
 
 @media (min-width: 992px) {
   #Header .navbar-brand img {
