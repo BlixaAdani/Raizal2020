@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 #Header {
   background-color: black !important; }
   #Header .navbar {
@@ -67,7 +68,7 @@ audio {
     color: rgba(255, 255, 255, 0.719); }
 
 .main-section {
-  background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), url("/assets/Fondo.jpg");
+  background: linear-gradient(rgba(150, 150, 150, 0.11), rgba(0, 0, 0, 0.7)), url("/assets/Fondo.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -78,15 +79,18 @@ audio {
   .main-section .container {
     padding-top: 0; }
     .main-section .container p {
-      font-size: 1.2rem;
-      color: #ffffffd7;
-      margin-bottom: 2rem; }
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; }
+      .main-section .container p mark {
+        background-color: #00000000;
+        color: #ffffff; }
   .main-section .img-fluid {
-    max-width: 30%;
+    margin-top: 0;
+    max-width: 20%;
     height: auto; }
 
 #contact-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/Fondo320.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.274)), url("/assets/Fondo320.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -140,6 +144,15 @@ audio {
     padding-top-margin: 0; }
 
 @media screen and (max-width: 385px) {
+  #Header .navbar-brand img {
+    height: 100%; }
+  .main-section .img-fluid {
+    margin-top: 10%;
+    max-width: 60%;
+    max-height: 100vh; }
+  .footer p {
+    font-size: 1rem;
+    height: 20px; }
   .audio-player-popup {
     opacity: 1;
     pointer-events: auto;
@@ -173,8 +186,6 @@ audio {
     margin-top: 10%;
     max-width: 50%;
     max-height: 100vh; }
-  .videos {
-    max-width: 300px; }
   .footer p {
     font-size: 1rem;
     height: 20px; } }
@@ -183,11 +194,8 @@ audio {
   #Header .navbar {
     padding: 1rem 2rem; }
   .main-section .img-fluid {
-    max-width: 40%; }
-  .videos {
-    max-width: 320px; } }
+    max-width: 40%; } }
 
-/* Media Queries for Responsive Behavior */
 @media screen and (max-width: 768px) {
   .audio-player-popup {
     top: 10%;
@@ -197,9 +205,7 @@ audio {
   #Header .navbar-brand img {
     height: 80px; }
   .main-section .container p {
-    font-size: 1.2rem; }
-  .videos {
-    max-width: 350px; } }
+    font-size: 1.2rem; } }
 
 @media (min-width: 1200px) {
   #Header .navbar {
@@ -207,33 +213,27 @@ audio {
   .main-section {
     height: 120vh; }
     .main-section .img-fluid {
+      margin-top: 0;
+      margin-top: 10%;
       max-width: 30%; }
-  .videos {
-    max-width: 400px; }
   .footer p {
     font-size: 1.2rem; } }
 
 @media (min-width: 1600px) {
   .main-section .container p {
-    font-size: 1.5rem; }
-  .videos {
-    max-width: 500px; } }
+    font-size: 1.5rem; } }
 
 @media (min-width: 1920px) {
   #Header .navbar-brand img {
     height: 100px; }
   .main-section .img-fluid {
-    max-width: 25%; }
-  .videos {
-    max-width: 600px; } }
+    max-width: 25%; } }
 
 @media (min-width: 2560px) {
   #Header .navbar-brand img {
     height: 120px; }
   .main-section .img-fluid {
     max-width: 20%; }
-  .videos {
-    max-width: 800px; }
   .footer p {
     font-size: 1.5rem; } }
 

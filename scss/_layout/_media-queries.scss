@@ -1,4 +1,19 @@
 @media screen and (max-width: 385px) {
+    #Header .navbar-brand img {
+        height: 100%;
+    }
+
+    .main-section .img-fluid {
+        margin-top: 10%;
+        max-width: 60%;
+        max-height: 100vh;
+    }
+
+    .footer p {
+        font-size: 1rem;
+        height: 20px;
+    }
+    
     .audio-player-popup {
         opacity: 1;
         pointer-events: auto;
@@ -48,10 +63,6 @@
         max-height: 100vh;
     }
 
-    .videos {
-        max-width: 300px;
-    }
-
     .footer p {
         font-size: 1rem;
         height: 20px;
@@ -66,13 +77,8 @@
     .main-section .img-fluid {
         max-width: 40%;
     }
-
-    .videos {
-        max-width: 320px;
-    }
 }
 
-/* Media Queries for Responsive Behavior */
 @media screen and (max-width: 768px) {
     .audio-player-popup {
       top: 10%;
@@ -88,10 +94,6 @@
     .main-section .container p {
         font-size: 1.2rem;
     }
-
-    .videos {
-        max-width: 350px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -103,12 +105,10 @@
         height: 120vh;
 
         .img-fluid {
+            margin-top: 0;
+            margin-top: 10%;
             max-width: 30%;
         }
-    }
-
-    .videos {
-        max-width: 400px;
     }
 
     .footer p {
@@ -120,10 +120,6 @@
     .main-section .container p {
         font-size: 1.5rem;
     }
-
-    .videos {
-        max-width: 500px;
-    }
 }
 
 @media (min-width: 1920px) {
@@ -133,10 +129,6 @@
 
     .main-section .img-fluid {
         max-width: 25%;
-    }
-
-    .videos {
-        max-width: 600px;
     }
 }
 
@@ -148,11 +140,7 @@
     .main-section .img-fluid {
         max-width: 20%;
     }
-
-    .videos {
-        max-width: 800px;
-    }
-
+    
     .footer p {
         font-size: 1.5rem;
     }

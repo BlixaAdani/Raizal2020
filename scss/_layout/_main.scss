@@ -81,7 +81,7 @@
   }
 
 .main-section {
-    background: linear-gradient(rgba(150, 150, 150, 0.397), rgba(0, 0, 0, 0.7)), $background-image;
+    background: linear-gradient(rgba(150, 150, 150, 0.11), rgba(0, 0, 0, 0.7)), $background-image;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -94,20 +94,25 @@
         padding-top: 0;
 
         p {
-            font-size: 1.2rem;
-            color: #ffffffd7;
-            margin-bottom: 2rem;
+          font-family: 'Playfair Display', serif;
+          font-size: 1.2rem;
+
+        mark {
+          background-color: #00000000;
+          color: #ffffff;
+        }
         }
     }
 
     .img-fluid {
-        max-width: 30%;
+      margin-top: 0;
+        max-width: 20%;
         height: auto;
     }
 }
 
 #contact-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $background-contact;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.274)), $background-contact;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,17 +1,17 @@
 #Header {
     background-color: black !important;
-
+  
     .navbar {
-        padding: 1rem 2rem;
-        background-color: rgba(0, 0, 0, 0.8) !important;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      color: #fffc65;
+  
+      .navbar-brand img {
+        height: 80px;
+      }
+  
+      .nav-link:hover {
         color: #fffc65;
-
-        .navbar-brand img {
-            height: 80px;
-        }
-
-        .nav-link:hover {
-            color: #fffc65;
-        }
+      }
     }
-}
+  }
