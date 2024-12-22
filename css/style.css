@@ -144,8 +144,6 @@
     background-image: url("/assets/Logowidthcolor-fotor-bg-remover-20241211175549.png");
     height: 80px;
     width: 120px;
-    background: red;
-    box-shadow: red 0 0 5px 1px;
     transition: all 500ms ease; }
     #biomain #preload img {
       margin-left: 10px;
@@ -156,12 +154,63 @@
       background: blue; }
 
 #archmain {
-  overflow: hidden; }
-
-#background-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  position: relative; }
+  #archmain #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; }
+  #archmain .container {
+    z-index: 1; }
+  #archmain .audio-container {
+    background-color: #bebcbc65;
+    color: #000000c5;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    /* Add smooth scaling effect */ }
+  #archmain .audio-container:hover {
+    transform: scale(1.02);
+    /* Slight zoom on hover for subtle feedback */ }
+  #archmain h6 {
+    margin-bottom: 0.5rem;
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8);
+    /* Text glow for better readability */ }
+  #archmain audio {
+    width: 100%;
+    max-width: 300px;
+    background-color: transparent;
+    /* Ensure audio background is clear */ }
+  #archmain audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px; }
+  #archmain audio::-webkit-media-controls-play-button,
+  #archmain audio::-webkit-media-controls-pause-button,
+  #archmain audio::-webkit-media-controls-next-track-button,
+  #archmain audio::-webkit-media-controls-previous-track-button {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease; }
+  #archmain audio::-webkit-media-controls-play-button:hover,
+  #archmain audio::-webkit-media-controls-pause-button:hover,
+  #archmain audio::-webkit-media-controls-next-track-button:hover,
+  #archmain audio::-webkit-media-controls-previous-track-button:hover {
+    box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.8);
+    color: white; }
+  #archmain audio::-webkit-media-controls-timeline {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    height: 4px; }
+  #archmain audio::-webkit-media-controls-volume-slider {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    transition: background-color 0.3s ease; }
+  #archmain audio::-webkit-media-controls-volume-slider:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
 
 .footer {
   background-color: #fffc65;
@@ -289,7 +338,7 @@
   #Header .navbar-brand img {
     height: 120px; }
   .main-section .img-fluid {
-    max-width: 20%; }
+    max-width: 50%; }
   .footer p {
     font-size: 1.5rem; } }
 

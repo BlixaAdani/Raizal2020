@@ -193,8 +193,6 @@
     background-image: $background-title;
     height: 80px;
     width: 120px;
-    background: red;
-    box-shadow: red 0 0 5px 1px;
     transition: all 500ms ease;
 
     img {
@@ -209,11 +207,81 @@
 }
 
 #archmain {
-  overflow: hidden;
-}
+  position: relative;
 
 #background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  z-index: 1;
+}
+
+.audio-container {
+  background-color:#bebcbc65;
+  color: #000000c5;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Add smooth scaling effect */
+}
+
+.audio-container:hover {
+  transform: scale(1.02); /* Slight zoom on hover for subtle feedback */
+}
+
+  h6 {
+  margin-bottom: 0.5rem;
+  text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8); /* Text glow for better readability */
+}
+
+audio {
+  width: 100%;
+  max-width: 300px;
+  background-color: transparent; /* Ensure audio background is clear */
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-next-track-button,
+audio::-webkit-media-controls-previous-track-button {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-pause-button:hover,
+audio::-webkit-media-controls-next-track-button:hover,
+audio::-webkit-media-controls-previous-track-button:hover {
+  box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  height: 4px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+audio::-webkit-media-controls-volume-slider:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 }
