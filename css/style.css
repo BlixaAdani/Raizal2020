@@ -170,20 +170,16 @@
     color: #000000c5;
     padding: 1rem;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-    /* Add smooth scaling effect */ }
+    transition: transform 0.3s ease; }
   #archmain .audio-container:hover {
-    transform: scale(1.02);
-    /* Slight zoom on hover for subtle feedback */ }
+    transform: scale(1.02); }
   #archmain h6 {
     margin-bottom: 0.5rem;
-    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8);
-    /* Text glow for better readability */ }
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8); }
   #archmain audio {
     width: 100%;
     max-width: 300px;
-    background-color: transparent;
-    /* Ensure audio background is clear */ }
+    background-color: transparent; }
   #archmain audio::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px; }
@@ -225,9 +221,7 @@
     height: 100%; }
   .main-section {
     max-width: 100%;
-    height: 200vh; }
-    .main-section .container {
-      max-height: 100vh; }
+    height: 100%; }
     .main-section .img-fluid {
       max-width: 100%;
       max-height: 100%; }
@@ -242,16 +236,26 @@
       top: -30%; }
   .footer p {
     font-size: 1rem;
-    height: 20px; } }
+    height: 20px; }
+  #archmain {
+    width: 100%;
+    height: 100%; }
+    #archmain .container {
+      background-image: url("/assets/Fondomobile.jpg");
+      background-repeat: repeat-y;
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      background-size: cover; }
+      #archmain .container .row {
+        max-height: 100%; } }
 
 @media (min-width: 385px) {
   #Header .navbar-brand img {
     height: 100%; }
   .main-section {
     max-width: 100%;
-    height: 200vh; }
-    .main-section .container {
-      max-height: 100vh; }
+    height: 100%; }
     .main-section .img-fluid {
       max-width: 100%;
       max-height: 100%; }
@@ -288,13 +292,27 @@
     max-height: 100vh; }
   .footer p {
     font-size: 1rem;
-    height: 20px; } }
+    height: 20px; }
+  #archmain {
+    height: 100vh; }
+    #archmain .container {
+      background-image: none;
+      width: 100%;
+      height: 100%; } }
 
 @media (min-width: 768px) {
   #Header .navbar {
     padding: 1rem 2rem; }
   .main-section .img-fluid {
-    max-width: 40%; } }
+    max-width: 40%; }
+  #archmain {
+    height: 120vh; }
+    #archmain #background-video {
+      height: 120vh; }
+    #archmain .container {
+      background-image: none;
+      width: 100%;
+      height: 100%; } }
 
 .audio-player-popup {
   top: 10%; }
@@ -309,7 +327,7 @@
   #Header .navbar {
     padding: 1.5rem 3rem; }
   .main-section {
-    height: 120vh; }
+    height: 100vh; }
     .main-section .audio-player-popup {
       opacity: 1;
       pointer-events: auto;
@@ -322,7 +340,14 @@
       margin-top: 10%;
       max-width: 30%; }
   .footer p {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  #archmain {
+    width: 100%;
+    height: 120vh; }
+    #archmain .container {
+      width: 100%; }
+      #archmain .container .row {
+        max-height: 100%; } }
 
 @media (min-width: 1600px) {
   .main-section .container p {
