@@ -1,11 +1,12 @@
+/* INDEX.HTML */
+
 .main-section {
   background: linear-gradient(rgba(150, 150, 150, 0.11), rgba(0, 0, 0, 0.7)), $background-image;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   text-align: center;
 
   .container {
@@ -88,8 +89,26 @@
         color: rgba(255, 255, 255, 0.719);
       }
     }
+
+    .row {
+      background-color: #33333300;
+      height: 50px;
+      padding: 30px;
+      margin-top: 20%;
+    }
+  
+    .col-12 {
+      background-color: #ffffff00;
+      border-radius: black 1px 0 0;
+    }
+    
+    .col-12:hover {
+      box-shadow: 0 0 10px #adadad;
+      background-color: #acacaca4;
+    }
   }
 }
+/* CONTACTO.HTML */
 
 #contact-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.274)), $background-contact;
@@ -156,6 +175,8 @@
   }
 }
 
+/* BIOGRAFIA.HTML */
+
 #biomain {
   background-image: $background-bio;
   background-position: center;
@@ -187,31 +208,12 @@
       font-size: 1.2rem;
       color: white;
       top: 5%;
-      margin-left: 0%;
+      margin-left: 2%;
     }
-  }
-
-  .row {
-    margin-top: 50%;
-    margin-right: 0;
-    background-color: #33333300;
-    height: 50px;
-    padding: 10px;
-  }
-
-  .col-12 {
-    border-radius: 30px;
-    text-align: center;
-    text-justify: center;
-    text-decoration: none;
-  }
-
-  .col-12:hover {
-    box-shadow: 0 0 10px rgba(173, 173, 173, 0.8);
-    background-color: rgba(172, 172, 172, 0.64);
   }
 }
 
+/* ARCHIVO.HTML */
 
 #archmain {
   position: relative;

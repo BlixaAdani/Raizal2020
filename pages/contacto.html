@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Contacta a Sergio Adani, productor y músico con más de 20 años de experiencia. Raizal2020, sonidos tribales y electrónicos que conectan culturas." />
-    <meta name="keywords" content="Raizal, Sergio Adani, contacto, música, producción musical, TSO" />
+    <meta name="description" content="Contacta a Sergio Adani, productor y músico con más de 20 años de experiencia.">
+    <meta name="keywords" content="Raizal, Sergio Adani, contacto, música">
     <meta name="author" content="Naim Francisco Adani Leiva">
     <meta name="theme-color" content="#de98f5">
     <meta property="og:title" content="Raizal - Contacto" />
-    <meta property="og:description"
-        content="Ponte en contacto con Sergio Adani, productor musical y creador de Raizal. Comparte tu mensaje y conectemos." />
+    <meta property="og:description" content="Conecta con Raizal." />
     <meta property="og:image" content="./assets/Logo.jpg" />
     <title>Contacto - Raizal</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/Logo.ico">
 </head>
 
 <body>
@@ -24,7 +21,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
-                    <img src="/assets/Logo.jpg" alt="Logo" class="Logo">
+                    <img src="/assets/Logo.jpg" alt="Logo" class="Logo" style="height: 80px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +30,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="/index.html" class="nav-link text-light">Inicio</a></li>
-                        <li class="nav-item"><a href="/pages/biografia.html" class="nav-link text-light">Biografía</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light">Biografía</a></li>
                         <li class="nav-item"><a href="/pages/archivo.html" class="nav-link text-light">Archivo</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-light">Contacto</a></li>
+                        <li class="nav-item"><a href="/pages/contacto.html" class="nav-link text-light">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,12 +40,12 @@
     </header>
     <main id="contact-bg">
         <div class="contact-header text-center text-light">
-            <h1 class="contact-title">Conéctate con Raizal</h1>
-            <p class="contact-info">Sonidos tribales latinoamericanos con producción electrónica industrial.</p>
-            </div>
+            <h1>Conéctate con Raizal</h1>
+            <p>Sonidos tribales latinoamericanos con producción electrónica industrial.</p>
+        </div>
 
         <section class="contact-form">
-            <form id="contactForm mt-3">
+            <form id="contactForm">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
@@ -68,6 +65,35 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('#contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = {
+                name: document.querySelector('#name').value,
+                email: document.querySelector('#email').value,
+                message: document.querySelector('#message').value,
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (response.ok) {
+                    alert('Your message has been sent!');
+                    document.querySelector('#contactForm').reset();
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
 </body>
 
 </html>
