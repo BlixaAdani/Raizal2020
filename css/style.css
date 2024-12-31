@@ -24,50 +24,6 @@
     .main-section .container .img-fluid {
       margin-top: 0;
       height: auto; }
-    .main-section .container .audio-container {
-      top: -30%;
-      width: 100%;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    .main-section .container .audio-player-popup {
-      background-color: #00000091;
-      color: #fff;
-      border: 1px solid rgba(138, 129, 129, 0.397);
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0px 8px 20px black;
-      opacity: 1; }
-    .main-section .container audio {
-      background-color: #000;
-      border-radius: 5px; }
-      .main-section .container audio::-webkit-media-controls-panel {
-        background-color: #000000; }
-      .main-section .container audio::-webkit-media-controls-play-button, .main-section .container audio::-webkit-media-controls-pause-button, .main-section .container audio::-webkit-media-controls-seek-back-button, .main-section .container audio::-webkit-media-controls-seek-forward-button {
-        color: rgba(255, 255, 255, 0.678);
-        background-color: rgba(255, 255, 255, 0.692);
-        border-radius: 50%; }
-        .main-section .container audio::-webkit-media-controls-play-button:hover, .main-section .container audio::-webkit-media-controls-pause-button:hover, .main-section .container audio::-webkit-media-controls-seek-back-button:hover, .main-section .container audio::-webkit-media-controls-seek-forward-button:hover {
-          color: #c5c5c598;
-          background-color: rgba(255, 255, 255, 0.842); }
-      .main-section .container audio::-webkit-media-controls-current-time-display, .main-section .container audio::-webkit-media-controls-time-remaining-display {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.74); }
-        .main-section .container audio::-webkit-media-controls-current-time-display:hover, .main-section .container audio::-webkit-media-controls-time-remaining-display:hover {
-          color: #bdbdbd; }
-      .main-section .container audio::-webkit-media-controls-timeline {
-        height: 4px;
-        border-radius: 2px;
-        background-color: rgba(255, 255, 255, 0.664); }
-      .main-section .container audio::-webkit-media-controls-volume-slider {
-        background-color: #c7c7c7;
-        border-radius: 2px; }
-      .main-section .container audio::media-controls-panel {
-        background-color: #ffffff;
-        color: #ffffffb2; }
-      .main-section .container audio::media-controls-play-button, .main-section .container audio::media-controls-pause-button {
-        color: rgba(255, 255, 255, 0.719); }
     .main-section .container .row {
       background-color: #33333300;
       height: 50px;
@@ -75,9 +31,10 @@
       margin-top: 20%; }
     .main-section .container .col-12 {
       background-color: #ffffff00;
-      border-radius: black 1px 0 0; }
+      border-radius: black 10px 10px 10px; }
     .main-section .container .col-12:hover {
-      box-shadow: 0 0 10px #adadad;
+      border-radius: 10px 1px 1px transparent;
+      box-shadow: 10px 10px 10px #adadad;
       background-color: #acacaca4; }
 
 /* CONTACTO.HTML */
@@ -173,48 +130,48 @@
     z-index: -1; }
   #archmain .container {
     z-index: 1; }
-  #archmain .audio-container {
-    background-color: #bebcbc65;
-    color: #000000c5;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease; }
-  #archmain .audio-container:hover {
-    transform: scale(1.02); }
-  #archmain h6 {
-    margin-bottom: 0.5rem;
-    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8); }
-  #archmain audio {
-    width: 100%;
-    max-width: 300px;
-    background-color: transparent; }
-  #archmain audio::-webkit-media-controls-panel {
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 5px; }
-  #archmain audio::-webkit-media-controls-play-button,
-  #archmain audio::-webkit-media-controls-pause-button,
-  #archmain audio::-webkit-media-controls-next-track-button,
-  #archmain audio::-webkit-media-controls-previous-track-button {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: transparent;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease; }
-  #archmain audio::-webkit-media-controls-play-button:hover,
-  #archmain audio::-webkit-media-controls-pause-button:hover,
-  #archmain audio::-webkit-media-controls-next-track-button:hover,
-  #archmain audio::-webkit-media-controls-previous-track-button:hover {
-    box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.8);
-    color: white; }
-  #archmain audio::-webkit-media-controls-timeline {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-    height: 4px; }
-  #archmain audio::-webkit-media-controls-volume-slider {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-    transition: background-color 0.3s ease; }
-  #archmain audio::-webkit-media-controls-volume-slider:hover {
-    background-color: rgba(255, 255, 255, 0.5); }
+    #archmain .container .audio-container {
+      background-color: rgba(60, 182, 145, 0.452);
+      color: #000000c5;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease; }
+    #archmain .container .audio-container:hover {
+      transform: scale(1.02); }
+    #archmain .container h6 {
+      margin-bottom: 0.7rem;
+      text-shadow: 0px 5px 9px rgba(255, 255, 255, 0.8); }
+    #archmain .container audio {
+      width: 100%;
+      max-width: 300px;
+      background-color: transparent; }
+    #archmain .container audio::-webkit-media-controls-panel {
+      background-color: rgba(60, 182, 145, 0.377);
+      border-radius: 5px; }
+    #archmain .container audio::-webkit-media-controls-play-button,
+    #archmain .container audio::-webkit-media-controls-pause-button,
+    #archmain .container audio::-webkit-media-controls-next-track-button,
+    #archmain .container audio::-webkit-media-controls-previous-track-button {
+      color: rgba(0, 0, 0, 0.7);
+      background-color: transparent;
+      border-radius: 50%;
+      transition: box-shadow 0.3s ease; }
+    #archmain .container audio::-webkit-media-controls-play-button:hover,
+    #archmain .container audio::-webkit-media-controls-pause-button:hover,
+    #archmain .container audio::-webkit-media-controls-next-track-button:hover,
+    #archmain .container audio::-webkit-media-controls-previous-track-button:hover {
+      box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.8);
+      color: white; }
+    #archmain .container audio::-webkit-media-controls-timeline {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      height: 4px; }
+    #archmain .container audio::-webkit-media-controls-volume-slider {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      transition: background-color 0.3s ease; }
+    #archmain .container audio::-webkit-media-controls-volume-slider:hover {
+      background-color: rgba(255, 255, 255, 0.5); }
 
 .footer {
   background-color: #fffc65;
