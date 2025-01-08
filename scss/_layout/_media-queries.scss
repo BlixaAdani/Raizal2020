@@ -39,6 +39,15 @@
     #biomain {
         background-image: url("/assets/Logo.jpg");
     }
+
+    #contact-bg {
+        .contact-form2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 25vh;
+          }
+    }
 }
 
 @media (min-width: 385px) {
@@ -144,6 +153,15 @@
 
 .audio-player-popup {
     top: 10%;
+
+    #contact-bg {
+        .contact-form2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 30vh;
+          }
+    }
 }
 
 @media (min-width: 992px) {
