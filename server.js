@@ -9,11 +9,11 @@ const PORT = 3000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://127.0.0.1:5500'  // Allow requests from the frontend origin
+  origin: 'http://127.0.0.1:5500'
 }));
 app.use(bodyParser.json());
 
-// Email route
+
 app.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body;
 
