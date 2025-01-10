@@ -113,7 +113,11 @@
     }
 
     #archmain {
-        height: 100vh;
+        height: 100%;
+
+        #background-video {
+            height: 190vh;
+        }
 
         .container {
             background-image: none;
@@ -133,10 +137,10 @@
     }
 
     #archmain {
-        height: 120vh;
+        height: 220vh;
 
         #background-video {
-            height: 120vh;
+            height: 220vh;
         }
 
         .container {
@@ -206,7 +210,7 @@
 
     #archmain {
         width: 100%;
-        height: 120vh;
+        height: 220vh;
 
         .container {
             width: 100%;
