@@ -36,6 +36,9 @@
       border-radius: 10px 1px 1px transparent;
       box-shadow: 10px 10px 10px #adadad;
       background-color: #acacaca4; }
+    .main-section .container .lista {
+      text-decoration: none;
+      color: white; }
 
 /* CONTACTO.HTML */
 #contact-bg {

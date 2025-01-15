@@ -1,52 +1,19 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+document.querySelector('#contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-const app = express();
-const PORT = 3000;
+    // Obtén los datos del formulario
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const message = document.querySelector('#message').value;
 
-// Middleware
-app.use(cors({
-  origin: 'http://127.0.0.1:5500'
-}));
-app.use(bodyParser.json());
+    // Número de WhatsApp (reemplaza con el tuyo)
+    const phoneNumber = '5491159479921';
 
+    // Crea el mensaje para WhatsApp
+    const whatsappMessage = `Hola, soy ${name}.\nMi correo es: ${email}.\nMensaje: ${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
 
-app.post('/send-email', async (req, res) => {
-    const { name, email, message } = req.body;
-
-    if (!name || !email || !message) {
-        return res.status(400).send('All fields (name, email, message) are required.');
-    }
-
-    try {
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
-
-        const mailOptions = {
-            from: email,
-            to: process.env.EMAIL_USER,
-            subject: `Message from ${name}`,
-            text: message,
-        };
-
-        await transporter.sendMail(mailOptions);
-        console.log('Email sent successfully');
-        res.status(200).send('Message sent successfully!');
-    } catch (error) {
-        console.error('Error sending email:', error);
-        res.status(500).send(`Error sending message: ${error.message}`);
-    }
-});
-
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    // Redirige a WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
 });
