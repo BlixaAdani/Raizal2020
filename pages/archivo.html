@@ -9,9 +9,9 @@
     <meta name="keywords" content="Raizal, Sergio Adani, contacto, música, producción musical, TSO" />
     <meta name="author" content="Naim Francisco Adani Leiva">
     <meta name="theme-color" content="#de98f5">
-    <meta property="og:title" content="Raizal - Contacto" />
+    <meta property="og:title" content="Raizal - Archivo" />
     <meta property="og:description"
-        content="Ponte en contacto con Sergio Adani, productor musical y creador de Raizal. Comparte tu mensaje y conectemos." />
+        content="Descubre los temas de Raizal, sonidos que conectan culturas. Da like y comenta sobre tus temas favoritos." />
     <meta property="og:image" content="./assets/Logo.jpg" />
     <title>Archivo - Raizal</title>
     <link rel="stylesheet" href="/css/style.css">
@@ -33,11 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="/index.html" class="nav-link text-light">Inicio</a></li>
-                        <li class="nav-item"><a href="/pages/biografia.html" class="nav-link text-light">Biografía</a>
-                        </li>
+                        <li class="nav-item"><a href="/pages/biografia.html" class="nav-link text-light">Biografía</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-light">Archivo</a></li>
-                        <li class="nav-item"><a href="/pages/contacto.html" class="nav-link text-light">Contacto</a>
-                        </li>
+                        <li class="nav-item"><a href="/pages/contacto.html" class="nav-link text-light">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,24 +47,32 @@
             <source src="/assets/Maratonika.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="container d-flex justify-content-center align-items-center">
+        <div class="container">
             <div class="row row-cols-1 row-cols-sm-3 row-cols-md-2 g-4 text-center">
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="banderas">
                         <h6>Banderas</h6>
                         <audio controls loop>
                             <source src="/assets/01-Banderas.wav" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
-                        <h6>Batería: Rubén Gaspar</h6>
-                        <h6>Bajo: Marcelo Maseira</h6>
-                        <h6>Teclado: Alfred</h6>
+                        <h6>Batería: Rubén Gaspar, Bajo: Marcelo Maseira</h6>
                         <h6>Guitarra: Sergio Adani y Damian Aguirre</h6>
                         <h6>Año: 2007</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="bagdad">
                         <h6>B.a.g.d.a.d</h6>
                         <audio controls loop>
                             <source src="/assets/02-B.a.g.d.a.d..wav" type="audio/mpeg">
@@ -77,10 +83,20 @@
                         <h6>Guitarra: Sergio Adani y Damian Aguirre</h6>
                         <h6>Programación de máquinas: Sergio Adani</h6>
                         <h6>Año: 2003</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="bienomal">
                         <h6>Bien o mal</h6>
                         <audio controls loop>
                             <source src="/assets/03-Bien o mal.wav" type="audio/mpeg">
@@ -91,10 +107,20 @@
                         <h6>Bajo: Sergio Adani</h6>
                         <h6>Guitarra: Sergio Adani</h6>
                         <h6>Año: 2002</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="novoyaparar">
                         <h6>No voy a parar</h6>
                         <audio controls loop>
                             <source src="/assets/04-No voy a parar.wav" type="audio/mpeg">
@@ -105,10 +131,20 @@
                         <h6>Acordeón: Rodrigo Casco Neisek</h6>
                         <h6>Guitarra: Sergio Adani</h6>
                         <h6>Año: 2022</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="desliz">
                         <h6>Desliz</h6>
                         <audio controls loop>
                             <source src="/assets/08-Desliz.wav" type="audio/mpeg">
@@ -120,10 +156,20 @@
                         <h6>1era guitarra: Alejandro Río</h6>
                         <h6>Flauta traversa: Aalía Trillo</h6>
                         <h6>Año: 2004</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="losmurcielagos">
                         <h6>Los murcielagos</h6>
                         <audio controls loop>
                             <source src="/assets/06-Los murcielagos.wav" type="audio/mpeg">
@@ -133,10 +179,20 @@
                         <h6>Guitarra: Hernán Marecos</h6>
                         <h6>Programación: Sergio Adani</h6>
                         <h6>Año: 2004</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="elviaje">
                         <h6>El viaje</h6>
                         <audio controls loop>
                             <source src="/assets/07-El viaje.wav" type="audio/mpeg">
@@ -144,10 +200,20 @@
                         </audio>
                         <h6>Guitarras: Sergio Adani</h6>
                         <h6>Año: 2002</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="audio-container">
+                    <div class="audio-container" data-id="caos">
                         <h6>Caos</h6>
                         <audio controls loop>
                             <source src="/assets/05-Caos.wav" type="audio/mpeg">
@@ -156,16 +222,98 @@
                         <h6>Voces: Laura Pron</h6>
                         <h6>Guitarra y programación: Sergio Adani</h6>
                         <h6>Año: 2007</h6>
+                        <button class="btn btn-light btn-sm mt-2 like-button">👍 Like</button>
+                        <span class="likes-count">0</span>
+                        <button class="btn btn-light btn-sm mt-2 comment-toggle">
+                            <img src="/assets/comment.svg" style="height: 30px; width: 30px;">
+                        </button>
+                        <div class="comments-section mt-3 d-none">
+                            <textarea class="form-control mb-2" placeholder="Deja tu comentario..."></textarea>
+                            <button class="btn btn-primary btn-sm add-comment-button">Añadir comentario</button>
+                            <ul class="comments-list list-unstyled mt-2"></ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
-
+    
     <footer class="footer text-center">
         <p>&copy; Raizal 2024, All rights reserved</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script> 
+       const initLikesAndComments = () => {
+        const containers = document.querySelectorAll('.audio-container');
+        containers.forEach(container => {
+            const id = container.dataset.id; // Obtener identificador único
+            const likes = localStorage.getItem(`${id}-likes`) || 0;
+            const comments = JSON.parse(localStorage.getItem(`${id}-comments`) || '[]');
+
+            // Actualiza los likes
+            container.querySelector('.likes-count').textContent = likes;
+
+            // Carga los comentarios
+            const commentsList = container.querySelector('.comments-list');
+            commentsList.innerHTML = ''; // Limpia cualquier contenido previo
+            comments.forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = comment;
+                commentsList.appendChild(li);
+            });
+        });
+    };
+
+    // Manejo de eventos
+    document.addEventListener('DOMContentLoaded', () => {
+        initLikesAndComments();
+
+        // Like button
+        document.querySelectorAll('.like-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.closest('.audio-container');
+                const id = container.dataset.id;
+                const likesCount = container.querySelector('.likes-count');
+                const newLikes = parseInt(likesCount.textContent) + 1;
+                likesCount.textContent = newLikes;
+                localStorage.setItem(`${id}-likes`, newLikes); // Guardar en localStorage
+            });
+        });
+
+        // Toggle comments section
+        document.querySelectorAll('.comment-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const commentsSection = button.closest('.audio-container').querySelector('.comments-section');
+                commentsSection.classList.toggle('d-none');
+            });
+        });
+
+        // Add comment
+        document.querySelectorAll('.add-comment-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.closest('.audio-container');
+                const id = container.dataset.id;
+                const textarea = container.querySelector('textarea');
+                const comment = textarea.value.trim();
+                if (comment) {
+                    // Guardar comentario
+                    const commentsList = container.querySelector('.comments-list');
+                    const li = document.createElement('li');
+                    li.textContent = comment;
+                    commentsList.appendChild(li);
+
+                    // Actualizar localStorage
+                    const comments = JSON.parse(localStorage.getItem(`${id}-comments`) || '[]');
+                    comments.push(comment);
+                    localStorage.setItem(`${id}-comments`, JSON.stringify(comments));
+
+                    textarea.value = '';
+                }
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>
